@@ -100,6 +100,12 @@ void calcFPS()
 }
 
 
+
+//TODO: create a 'getScreenshot' overload that returns 30x30 screenshot from the center 
+//of Game Window (so that we can use mouse even while BOT doing it's work)
+//TODO: accept some cmdline args to modify certain behavior of the program (e.g. threshold)
+
+
 int main()
 {
     //Show some general instrcution
@@ -127,7 +133,6 @@ int main()
         
         cv::Mat Snapshot = getScreenshot();
         cv::cvtColor(Snapshot, Snapshot, cv::COLOR_BGR2GRAY);
-        //calcFPS();
         cv::imshow("Output", Snapshot);
 
         if(bot)
@@ -153,6 +158,7 @@ int main()
         }
 label:
         key = cv::waitKey(35);
+        //calcFPS();
     }
     
     cv::destroyAllWindows();
