@@ -110,10 +110,10 @@ int main()
 {
     //Show some general instrcution
     std::cout << "[*] Press [6] to On-Off BOT" << std::endl;
-    std::cout << "[*] Press [0] (In-Game) to Exit BOT , or" << std::endl;
-    std::cout << "[*] Press [ESC] to Exit BOT" << std::endl;
+    std::cout << "[*] Press [0] (In-Game) to Exit BOT" << std::endl;
+    std::cout << "[*] Press [ESC] to Exit Output Window" << std::endl;
     std::cout << "[+] Note: Pressing cross (X) won't exit BOT" << std::endl;
-
+    std::cout << "[+] BOT State: OFF" << std::endl;
 
     cv::namedWindow("Output", cv::WINDOW_NORMAL);
     
@@ -127,6 +127,7 @@ int main()
         if(GetAsyncKeyState(VK_NUMPAD6))
         {
             bot = !bot;
+            std::cout << "[+] BOT State: " << (bot?"ON":"OFF") << std::endl;
             firstTime = true;
             Sleep(50);
         }
@@ -164,5 +165,3 @@ label:
     cv::destroyAllWindows();
     return 0;
 }
-
-
