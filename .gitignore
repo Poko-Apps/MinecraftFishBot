@@ -2,3 +2,8 @@
 *.dll
 *.exe
 .vscode
+*.jpg
+*.jpeg
+*.png
+*.zip
+*.rar
