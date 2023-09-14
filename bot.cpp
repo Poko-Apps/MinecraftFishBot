@@ -108,7 +108,7 @@ void calcFPS()
 
 int main()
 {
-    //Show some general instrcution
+    //Show some general instruction
     std::cout << "[*] Press [6] to On-Off BOT" << std::endl;
     std::cout << "[*] Press [0] (In-Game) to Exit BOT" << std::endl;
     std::cout << "[*] Press [ESC] to Exit Output Window" << std::endl;
@@ -141,10 +141,14 @@ int main()
         {
             if(firstTime)
             {
-                rightClick();//cast the rod for the first time
-                Sleep(1900);
+                // check if rod is already not casted
+                if (sumBlackPixel(Snapshot) < THRESHOLD)
+                {
+                    rightClick();//cast the rod for the first time
+                    Sleep(1900);
+                }
                 firstTime = false;
-                goto label;
+                goto waitkey;
             }
 
             if(sumBlackPixel(Snapshot) < THRESHOLD )
@@ -158,7 +162,7 @@ int main()
                 Sleep(2000);//wait 2 seconds before processing any further
             }
         }
-label:
+waitkey:
         key = cv::waitKey(35);
         //calcFPS();
     }

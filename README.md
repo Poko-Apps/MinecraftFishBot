@@ -11,7 +11,7 @@ Minecraft 1.16+ (JAVA edition) got a nerf in terms of fishing mechanics . becaus
 
 > [Output] : will show 30x30 area around your mouse to help you place your bobber in center of it.
 * Open MC (must not be full window [see below screenshots]) and place the bobber in center of the cursor ('+' in game) in a way that whenever you right click (to cast the rod) the bobber goes back to same position ('+') . might need some adjustment of FOV (btwn 70-100) .
-* After you make sure everything is perfect (fishing rod must not be casted at this point) then toggle the BOT using key '6' (or whatever terminal says) .
+* After you make sure everything is perfect , then toggle the BOT using key '6'.
 
 ## Note
 While BOT is doing it's work don't touch your mouse (if you did, something unexpected might happen but you can always press '0' to shutdown the BOT )
