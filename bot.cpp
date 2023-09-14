@@ -129,6 +129,7 @@ int main()
             bot = !bot;
             std::cout << "[+] BOT State: " << (bot?"ON":"OFF") << std::endl;
             firstTime = true;
+            fish_count = 0;//reset it every time toggle key pressed 
             Sleep(50);
         }
         
